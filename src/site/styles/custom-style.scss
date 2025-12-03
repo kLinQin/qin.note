@@ -117,12 +117,12 @@ body {
         object-fit: contain !important;
     }
     
-    /* Specific size for weapon images (Aturan Lama Anda) */
+    /* Specific size for weapon images (KOREKSI DI SINI) */
     .markdown-preview-view table img[width="90"],
     .markdown-rendered table img[width="90"] {
         width: 90px !important;
-        height: 90px !important;
-        object-fit: contain !important; /* Tetap pakai contain */
+        height: auto !important; /* KOREKSI: Gunakan auto agar gambar tidak gepeng */
+        object-fit: contain !important;
     }
     
     /* =========================================== */
