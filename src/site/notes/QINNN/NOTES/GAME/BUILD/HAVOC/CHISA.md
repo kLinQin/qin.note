@@ -46,7 +46,6 @@
 <br>
 <center><b>REKOMENDASI ECHO SET</b></center>
 <div style="overflow-x: auto;">  
-
 <table>
   <thead>
     <tr>
