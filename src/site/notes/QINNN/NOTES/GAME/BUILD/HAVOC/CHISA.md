@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/qinnn/notes/game/build/havoc/chisa/"}
+{"dg-publish":true,"permalink":"/qinnn/notes/game/build/havoc/chisa/","created":"2025-12-04T01:24:19.901+07:00"}
 ---
 
 # <center><td align="center"><img src="https://api.hakush.in/ww/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_57_UI.webp" alt="kumokiri" width="30" height="30"></td> CHISA BUILD GUIDE</center>
@@ -22,6 +22,7 @@
       <th align="center">MERCY</th>
     </tr>
   </thead>
+  
   <tbody>
     <tr>
       <td align="center"><img src="https://r2.tethys.gg/assets/icon-weapon/T_IconWeapon21010056_UI.png" alt="kumokiri" width="90" height="90"></td>
@@ -37,13 +38,15 @@
   <td align="center" bgcolor="#68B4E8" style="background-color: #329a77;">100%</td>
   <td align="center" bgcolor="#53A953" style="background-color: #53A953;">80%</td>
 </tr>
-  </tbody>
+</tbody>
+
 </table>
 </div>
 
 <br>
 <center><b>REKOMENDASI ECHO SET</b></center>
-<div style="overflow-x: auto;">   
+<div style="overflow-x: auto;">  
+
 <table>
   <thead>
     <tr>
@@ -56,6 +59,7 @@
       <th align="center" style="vertical-align: middle;">COST 1</th>      
     </tr>
   </thead>
+  
   <tbody>
     <tr>
       <td align="center" style="vertical-align: middle;"><img src="https://r2.tethys.gg/assets/sonata-icon/Thread%20of%20Severed%20Fate.png" alt="tofs" width="90" height="90"></td>
@@ -75,6 +79,7 @@
       <td align="center" bgcolor="#C45A39" style="background-color: #2f4f4f;">Attack</td>
     </tr>
   </tbody>
+  
 </table>
 </div>
 <br>
@@ -101,6 +106,7 @@
     <span style="color: #553c9a; font-weight: bold;">ATK</span>
   </span>
 </div>
+
 <br>
 <center><b>SEQUENCE PRIORITY </b></center>
 

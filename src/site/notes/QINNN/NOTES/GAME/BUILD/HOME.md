@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/qinnn/notes/game/build/home/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/qinnn/notes/game/build/home/","tags":["gardenEntry"],"created":"2025-12-03T23:38:10.695+07:00"}
 ---
 
 # <center>QINN NOTES - WAWA INDONESIA</center>

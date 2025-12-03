@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/qinnn/notes/recipes/vegetables/bakwan-jagung/"}
+{"dg-publish":true,"permalink":"/qinnn/notes/recipes/vegetables/bakwan-jagung/","created":"2025-12-02T22:19:13.956+07:00"}
 ---
 
 
