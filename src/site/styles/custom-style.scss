@@ -16,9 +16,11 @@ body {
         border-spacing: 0 !important;
         border-radius: 6px !important;
         overflow: hidden !important;
-        margin: 1.5em auto !important;
-        width: 100% !important;
-        max-width: 100% !important;
+        /* --- PERBAIKAN CENTERING TABEL --- */
+        margin: 1.5em auto !important; /* Centering Rule */
+        width: 90% !important; /* Dibuat 90% agar margin auto bekerja */
+        max-width: 700px !important; /* Atur lebar maksimum yang sesuai */
+        /* ---------------------------------- */
         background-color: var(--background-primary) !important;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
     }
@@ -87,43 +89,42 @@ body {
     }
     
     /* =========================================== */
-/* FIX IMAGE SIZE IN TABLES (Lebih General) */
-/* =========================================== */
-
-/* Gambar di dalam tabel tidak boleh menyusut atau diregangkan */
-.markdown-preview-view table img,
-.markdown-rendered table img {
-    /* Mencegah gambar menyusut dari ukuran aslinya */
-    max-width: 100% !important; 
+    /* FIX IMAGE SIZE IN TABLES (Lebih General) */
+    /* =========================================== */
     
-    /* Mempertahankan rasio aspek gambar */
-    height: auto !important; 
+    /* Gambar di dalam tabel tidak boleh menyusut atau diregangkan */
+    .markdown-preview-view table img,
+    .markdown-rendered table img {
+        /* Mencegah gambar menyusut dari ukuran aslinya */
+        max-width: 100% !important; 
+        
+        /* Mempertahankan rasio aspek gambar */
+        height: auto !important; 
+        
+        /* Memastikan seluruh gambar terlihat tanpa terpotong (General Fix) */
+        object-fit: contain !important; 
+        
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin: 0 !important;
+    }
     
-    /* Memastikan seluruh gambar terlihat tanpa terpotong (General Fix) */
-    object-fit: contain !important; 
+    /* Aturan Spesifik Gambar (Tetap Diperlukan jika Anda menetapkan ukuran tetap) */
+    .markdown-preview-view table img[width],
+    .markdown-rendered table img[width] {
+        /* Jika lebar ditetapkan, object-fit: contain akan mencegah gepeng */
+        height: auto !important; /* Diubah agar lebih general */
+        object-fit: contain !important;
+    }
     
-    display: inline-block !important;
-    vertical-align: middle !important;
-    margin: 0 !important;
-}
-
-/* Aturan Spesifik Gambar (Tetap Diperlukan jika Anda menetapkan ukuran tetap) */
-.markdown-preview-view table img[width],
-.markdown-rendered table img[width] {
-    /* Jika lebar ditetapkan (misalnya width="90"), maka tingginya juga harus ditetapkan 
-       agar gambar memiliki container kotak, tetapi object-fit: contain akan mencegahnya gepeng */
-    height: attr(width) !important; /* Mengambil nilai dari atribut width */
-    object-fit: contain !important;
-}
-
-/* Specific size for weapon images (Aturan Lama Anda) */
-.markdown-preview-view table img[width="90"],
-.markdown-rendered table img[width="90"] {
-    width: 90px !important;
-    height: 90px !important;
-    object-fit: contain !important; /* Tetap pakai contain */
-}
-
+    /* Specific size for weapon images (Aturan Lama Anda) */
+    .markdown-preview-view table img[width="90"],
+    .markdown-rendered table img[width="90"] {
+        width: 90px !important;
+        height: 90px !important;
+        object-fit: contain !important; /* Tetap pakai contain */
+    }
+    
     /* =========================================== */
     /* WEAPON TABLE SPECIFIC (FOR BACKWARD COMPATIBILITY) */
     /* =========================================== */
@@ -355,11 +356,13 @@ body {
             padding: 8px 12px !important;
         }
         
+        /* --- PERBAIKAN GAMBAR GEPENG MOBILE --- */
         .markdown-preview-view table img[width="90"],
         .markdown-rendered table img[width="90"] {
             width: 70px !important;
-            height: 70px !important;
+            /* height: 70px !important; <- DIHAPUS agar height: auto berfungsi */
         }
+        /* -------------------------------------- */
         
         /* Mobile typography */
         .markdown-preview-view,
@@ -387,7 +390,7 @@ body {
         .markdown-preview-view table img[width="90"],
         .markdown-rendered table img[width="90"] {
             width: 60px !important;
-            height: 60px !important;
+            /* height: 60px !important; <- DIHAPUS agar height: auto berfungsi */
         }
         
         .markdown-preview-view,
@@ -488,6 +491,11 @@ html body .workspace .markdown-rendered.is-readable-line-width .markdown-preview
     border: 1px solid var(--background-modifier-border) !important;
     border-collapse: separate !important;
     border-spacing: 0 !important;
+    /* --- PERBAIKAN CENTERING TABEL --- */
+    margin: 1.5em auto !important; 
+    width: 90% !important; 
+    max-width: 700px !important;
+    /* ---------------------------------- */
 }
 
 html body .workspace .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .markdown-preview-section table th,
