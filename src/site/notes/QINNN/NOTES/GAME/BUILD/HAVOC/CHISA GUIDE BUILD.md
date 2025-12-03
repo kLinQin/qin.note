@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/qinnn/notes/game/build/havoc/chisa-guide-build/"}
+{"dg-publish":true,"permalink":"/qinnn/notes/game/build/havoc/chisa-guide-build/","tags":["gardenEntry"]}
 ---
 
 <center>

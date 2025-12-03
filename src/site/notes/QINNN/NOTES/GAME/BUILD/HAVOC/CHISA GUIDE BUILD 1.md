@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/qinnn/notes/game/build/havoc/chisa-guide-build-1/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/qinnn/notes/game/build/havoc/chisa-guide-build-1/"}
 ---
 
 ![chisa banner](https://r2.tethys.gg/assets/banner/Chisa.webp)
