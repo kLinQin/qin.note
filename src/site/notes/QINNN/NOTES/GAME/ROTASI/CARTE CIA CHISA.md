@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/qinnn/notes/game/rotasi/carte-cia-chisa/","updated":"2025-12-02T22:19:13.892+07:00"}
+{"dg-publish":true,"permalink":"/qinnn/notes/game/rotasi/carte-cia-chisa/"}
 ---
 
 
