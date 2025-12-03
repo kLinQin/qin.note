@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/qinnn/notes/recipes/vegetables/tumis-kangkung/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/qinnn/notes/recipes/vegetables/tumis-kangkung/"}
 ---
 
 ![Fresh kale vegetables that are sold in supermarkets can be used for backgrounds and illustrations](https://images.unsplash.com/photo-1662318183265-5bbe6578d1b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjAwOTd8MHwxfHNlYXJjaHwxfHxrYW5na3VuZ3xlbnwwfDB8fHwxNzY0NjM5MjM1fDA&ixlib=rb-4.1.0&q=80&w=1080)
