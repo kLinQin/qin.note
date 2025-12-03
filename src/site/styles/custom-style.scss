@@ -1,13 +1,513 @@
 body {
     /***
-      ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
+      CUSTOM CSS FOR OBSIDIAN-LIKE MINIMAL THEME
+      Using !important to override theme styles
    ***/
-    //  background-color: white;
-    //  .content {
-    //   font-size: 14px;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+   
+    /* =========================================== */
+    /* GENERAL TABLE STYLING (ALL TABLES) */
+    /* =========================================== */
+    
+    /* Force table borders to be visible in dark mode */
+    .markdown-preview-view table,
+    .markdown-rendered table {
+        border: 1px solid var(--background-modifier-border) !important;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+        border-radius: 6px !important;
+        overflow: hidden !important;
+        margin: 1.5em auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        background-color: var(--background-primary) !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* Table header styling */
+    .markdown-preview-view table thead,
+    .markdown-rendered table thead {
+        background-color: var(--background-secondary) !important;
+        border-bottom: 2px solid var(--interactive-accent) !important;
+    }
+    
+    .markdown-preview-view table th,
+    .markdown-rendered table th {
+        padding: 12px 16px !important;
+        font-weight: 600 !important;
+        text-align: left !important;
+        color: var(--text-normal) !important;
+        border-bottom: 2px solid var(--interactive-accent) !important;
+        border-right: 1px solid var(--background-modifier-border) !important;
+        background-color: var(--background-secondary) !important;
+        position: relative !important;
+    }
+    
+    .markdown-preview-view table th:last-child,
+    .markdown-rendered table th:last-child {
+        border-right: none !important;
+    }
+    
+    /* Table body styling */
+    .markdown-preview-view table td,
+    .markdown-rendered table td {
+        padding: 10px 16px !important;
+        border-bottom: 1px solid var(--background-modifier-border) !important;
+        border-right: 1px solid var(--background-modifier-border) !important;
+        color: var(--text-normal) !important;
+        vertical-align: middle !important;
+    }
+    
+    .markdown-preview-view table td:last-child,
+    .markdown-rendered table td:last-child {
+        border-right: none !important;
+    }
+    
+    /* Table row styling */
+    .markdown-preview-view table tr,
+    .markdown-rendered table tr {
+        transition: background-color 0.2s ease !important;
+    }
+    
+    /* Zebra striping */
+    .markdown-preview-view table tbody tr:nth-child(even),
+    .markdown-rendered table tbody tr:nth-child(even) {
+        background-color: var(--background-secondary-alt) !important;
+    }
+    
+    /* Hover effect */
+    .markdown-preview-view table tbody tr:hover,
+    .markdown-rendered table tbody tr:hover {
+        background-color: var(--background-modifier-hover) !important;
+    }
+    
+    /* Last row no bottom border */
+    .markdown-preview-view table tbody tr:last-child td,
+    .markdown-rendered table tbody tr:last-child td {
+        border-bottom: none !important;
+    }
+    
+    /* =========================================== */
+/* FIX IMAGE SIZE IN TABLES (Lebih General) */
+/* =========================================== */
+
+/* Gambar di dalam tabel tidak boleh menyusut atau diregangkan */
+.markdown-preview-view table img,
+.markdown-rendered table img {
+    /* Mencegah gambar menyusut dari ukuran aslinya */
+    max-width: 100% !important; 
+    
+    /* Mempertahankan rasio aspek gambar */
+    height: auto !important; 
+    
+    /* Memastikan seluruh gambar terlihat tanpa terpotong (General Fix) */
+    object-fit: contain !important; 
+    
+    display: inline-block !important;
+    vertical-align: middle !important;
+    margin: 0 !important;
+}
+
+/* Aturan Spesifik Gambar (Tetap Diperlukan jika Anda menetapkan ukuran tetap) */
+.markdown-preview-view table img[width],
+.markdown-rendered table img[width] {
+    /* Jika lebar ditetapkan (misalnya width="90"), maka tingginya juga harus ditetapkan 
+       agar gambar memiliki container kotak, tetapi object-fit: contain akan mencegahnya gepeng */
+    height: attr(width) !important; /* Mengambil nilai dari atribut width */
+    object-fit: contain !important;
+}
+
+/* Specific size for weapon images (Aturan Lama Anda) */
+.markdown-preview-view table img[width="90"],
+.markdown-rendered table img[width="90"] {
+    width: 90px !important;
+    height: 90px !important;
+    object-fit: contain !important; /* Tetap pakai contain */
+}
+
+    /* =========================================== */
+    /* WEAPON TABLE SPECIFIC (FOR BACKWARD COMPATIBILITY) */
+    /* =========================================== */
+    
+    .weapon-table,
+    table.weapon-table {
+        border: 2px solid var(--interactive-accent) !important;
+        min-width: 700px !important;
+    }
+    
+    .weapon-table th,
+    table.weapon-table th {
+        background: linear-gradient(
+            to bottom,
+            var(--background-secondary),
+            var(--background-secondary-alt)
+        ) !important;
+        text-align: center !important;
+        font-size: 0.9em !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+    }
+    
+    .weapon-table td,
+    table.weapon-table td {
+        text-align: center !important;
+    }
+    
+    /* Color coding for percentages */
+    .markdown-preview-view table td[bgcolor="#C45A39"],
+    .markdown-rendered table td[bgcolor="#C45A39"] {
+        background-color: #C45A39 !important;
+        color: white !important;
+        font-weight: bold !important;
+    }
+    
+    .markdown-preview-view table td[bgcolor="#D36F3D"],
+    .markdown-rendered table td[bgcolor="#D36F3D"] {
+        background-color: #D36F3D !important;
+        color: white !important;
+        font-weight: bold !important;
+    }
+    
+    .markdown-preview-view table td[bgcolor="#4AA0E1"],
+    .markdown-rendered table td[bgcolor="#4AA0E1"] {
+        background-color: #4AA0E1 !important;
+        color: white !important;
+        font-weight: bold !important;
+    }
+    
+    .markdown-preview-view table td[bgcolor="#68B4E8"],
+    .markdown-rendered table td[bgcolor="#68B4E8"] {
+        background-color: #68B4E8 !important;
+        color: white !important;
+        font-weight: bold !important;
+    }
+    
+    .markdown-preview-view table td[bgcolor="#53A953"],
+    .markdown-rendered table td[bgcolor="#53A953"] {
+        background-color: #53A953 !important;
+        color: white !important;
+        font-weight: bold !important;
+    }
+    
+    /* =========================================== */
+    /* SCROLLABLE TABLE CONTAINER */
+    /* =========================================== */
+    
+    .table-container,
+    .weapon-table-container {
+        overflow-x: auto !important;
+        margin: 1.5em 0 !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    .table-container table,
+    .weapon-table-container table {
+        margin: 0 !important;
+    }
+    
+    /* =========================================== */
+    /* MINIMAL OBSIDIAN-LIKE TYPOGRAPHY */
+    /* =========================================== */
+    
+    /* Base text */
+    .markdown-preview-view,
+    .markdown-rendered {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        color: var(--text-normal) !important;
+        font-family: var(--font-text) !important;
+    }
+    
+    /* Headings */
+    .markdown-preview-view h1,
+    .markdown-rendered h1 {
+        font-size: 2em !important;
+        margin-top: 1.5em !important;
+        margin-bottom: 0.75em !important;
+        font-weight: 600 !important;
+        color: var(--text-normal) !important;
+        border-bottom: 2px solid var(--background-modifier-border) !important;
+        padding-bottom: 0.3em !important;
+    }
+    
+    .markdown-preview-view h2,
+    .markdown-rendered h2 {
+        font-size: 1.5em !important;
+        margin-top: 1.5em !important;
+        margin-bottom: 0.75em !important;
+        font-weight: 600 !important;
+        color: var(--text-normal) !important;
+        border-bottom: 1px solid var(--background-modifier-border) !important;
+        padding-bottom: 0.3em !important;
+    }
+    
+    .markdown-preview-view h3,
+    .markdown-rendered h3 {
+        font-size: 1.25em !important;
+        margin-top: 1.5em !important;
+        margin-bottom: 0.5em !important;
+        font-weight: 600 !important;
+        color: var(--text-normal) !important;
+    }
+    
+    .markdown-preview-view h4,
+    .markdown-rendered h4 {
+        font-size: 1.1em !important;
+        margin-top: 1.5em !important;
+        margin-bottom: 0.5em !important;
+        font-weight: 600 !important;
+        color: var(--text-normal) !important;
+    }
+    
+    .markdown-preview-view h5,
+    .markdown-rendered h5 {
+        font-size: 1em !important;
+        margin-top: 1.5em !important;
+        margin-bottom: 0.5em !important;
+        font-weight: 600 !important;
+        color: var(--text-muted) !important;
+    }
+    
+    .markdown-preview-view h6,
+    .markdown-rendered h6 {
+        font-size: 0.9em !important;
+        margin-top: 1.5em !important;
+        margin-bottom: 0.5em !important;
+        font-weight: 600 !important;
+        color: var(--text-faint) !important;
+    }
+    
+    /* Paragraph and lists */
+    .markdown-preview-view p,
+    .markdown-rendered p {
+        margin-bottom: 1em !important;
+        line-height: 1.6 !important;
+    }
+    
+    .markdown-preview-view ul,
+    .markdown-preview-view ol,
+    .markdown-rendered ul,
+    .markdown-rendered ol {
+        margin-bottom: 1em !important;
+        padding-left: 1.5em !important;
+    }
+    
+    .markdown-preview-view li,
+    .markdown-rendered li {
+        margin-bottom: 0.5em !important;
+        line-height: 1.6 !important;
+    }
+    
+    /* Code blocks */
+    .markdown-preview-view code,
+    .markdown-rendered code {
+        background-color: var(--background-secondary) !important;
+        color: var(--text-code) !important;
+        padding: 0.2em 0.4em !important;
+        border-radius: 3px !important;
+        font-size: 0.9em !important;
+        font-family: var(--font-monospace) !important;
+    }
+    
+    .markdown-preview-view pre,
+    .markdown-rendered pre {
+        background-color: var(--background-secondary) !important;
+        border: 1px solid var(--background-modifier-border) !important;
+        border-radius: 6px !important;
+        padding: 1em !important;
+        overflow: auto !important;
+        margin: 1em 0 !important;
+    }
+    
+    /* Blockquotes */
+    .markdown-preview-view blockquote,
+    .markdown-rendered blockquote {
+        border-left: 3px solid var(--interactive-accent) !important;
+        margin: 1em 0 !important;
+        padding: 0.5em 1em !important;
+        background-color: var(--background-secondary) !important;
+        border-radius: 0 6px 6px 0 !important;
+        color: var(--text-muted) !important;
+    }
+    
+    /* Horizontal rule */
+    .markdown-preview-view hr,
+    .markdown-rendered hr {
+        border: none !important;
+        border-top: 1px solid var(--background-modifier-border) !important;
+        margin: 2em 0 !important;
+    }
+    
+    /* =========================================== */
+    /* RESPONSIVE DESIGN */
+    /* =========================================== */
+    
+    @media (max-width: 768px) {
+        /* Mobile table adjustments */
+        .markdown-preview-view table,
+        .markdown-rendered table {
+            font-size: 0.9em !important;
+        }
+        
+        .markdown-preview-view table th,
+        .markdown-preview-view table td,
+        .markdown-rendered table th,
+        .markdown-rendered table td {
+            padding: 8px 12px !important;
+        }
+        
+        .markdown-preview-view table img[width="90"],
+        .markdown-rendered table img[width="90"] {
+            width: 70px !important;
+            height: 70px !important;
+        }
+        
+        /* Mobile typography */
+        .markdown-preview-view,
+        .markdown-rendered {
+            font-size: 15px !important;
+        }
+        
+        .markdown-preview-view h1,
+        .markdown-rendered h1 {
+            font-size: 1.75em !important;
+        }
+        
+        .markdown-preview-view h2,
+        .markdown-rendered h2 {
+            font-size: 1.4em !important;
+        }
+        
+        .markdown-preview-view h3,
+        .markdown-rendered h3 {
+            font-size: 1.2em !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .markdown-preview-view table img[width="90"],
+        .markdown-rendered table img[width="90"] {
+            width: 60px !important;
+            height: 60px !important;
+        }
+        
+        .markdown-preview-view,
+        .markdown-rendered {
+            font-size: 14px !important;
+        }
+    }
+    
+    /* =========================================== */
+    /* UTILITY CLASSES */
+    /* =========================================== */
+    
+    /* Text alignment */
+    .text-center {
+        text-align: center !important;
+    }
+    
+    .text-left {
+        text-align: left !important;
+    }
+    
+    .text-right {
+        text-align: right !important;
+    }
+    
+    /* Spacing */
+    .mt-1 { margin-top: 0.5em !important; }
+    .mt-2 { margin-top: 1em !important; }
+    .mt-3 { margin-top: 1.5em !important; }
+    .mb-1 { margin-bottom: 0.5em !important; }
+    .mb-2 { margin-bottom: 1em !important; }
+    .mb-3 { margin-bottom: 1.5em !important; }
+    
+    /* Color utilities */
+    .text-muted {
+        color: var(--text-muted) !important;
+    }
+    
+    .text-accent {
+        color: var(--interactive-accent) !important;
+    }
+    
+    /* =========================================== */
+    /* DARK MODE ENHANCEMENTS */
+    /* =========================================== */
+    
+    .theme-dark {
+        /* Make borders more visible in dark mode */
+        .markdown-preview-view table,
+        .markdown-rendered table {
+            border-color: var(--background-modifier-border) !important;
+        }
+        
+        .markdown-preview-view table th,
+        .markdown-rendered table th {
+            border-bottom-color: var(--interactive-accent) !important;
+            background-color: var(--background-secondary) !important;
+        }
+        
+        /* Table row hover more visible */
+        .markdown-preview-view table tbody tr:hover,
+        .markdown-rendered table tbody tr:hover {
+            background-color: rgba(var(--interactive-accent-rgb), 0.1) !important;
+        }
+    }
+    
+    /* =========================================== */
+    /* FIX FOR SPECIFICITY ISSUES */
+    /* =========================================== */
+    
+    /* Use very specific selectors to override theme */
+    body .markdown-preview-view .markdown-preview-sizer .markdown-preview-section table,
+    body .markdown-rendered .markdown-preview-sizer .markdown-preview-section table {
+        border: 1px solid var(--background-modifier-border) !important;
+    }
+    
+    body .markdown-preview-view .markdown-preview-sizer .markdown-preview-section table th,
+    body .markdown-rendered .markdown-preview-sizer .markdown-preview-section table th {
+        background-color: var(--background-secondary) !important;
+        border-bottom: 2px solid var(--interactive-accent) !important;
+    }
+    
+    /* Ensure images in tables keep their size */
+    body .markdown-preview-view .markdown-preview-sizer .markdown-preview-section table td img,
+    body .markdown-rendered .markdown-preview-sizer .markdown-preview-section table td img {
+        max-width: none !important;
+        width: auto !important;
+    }
+}
+
+/* =========================================== */
+/* IMPORTANT: FORCE OVERRIDES WITH HIGH SPECIFICITY */
+/* =========================================== */
+
+/* This is the nuclear option - should override almost anything */
+html body .workspace .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .markdown-preview-section table,
+html body .workspace .markdown-rendered.is-readable-line-width .markdown-preview-sizer .markdown-preview-section table {
+    border: 1px solid var(--background-modifier-border) !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+html body .workspace .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .markdown-preview-section table th,
+html body .workspace .markdown-rendered.is-readable-line-width .markdown-preview-sizer .markdown-preview-section table th {
+    background-color: var(--background-secondary) !important;
+    border-bottom: 2px solid var(--interactive-accent) !important;
+    color: var(--text-normal) !important;
+}
+
+html body .workspace .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .markdown-preview-section table td,
+html body .workspace .markdown-rendered.is-readable-line-width .markdown-preview-sizer .markdown-preview-section table td {
+    border-bottom: 1px solid var(--background-modifier-border) !important;
+    border-right: 1px solid var(--background-modifier-border) !important;
+    color: var(--text-normal) !important;
+}
+
+/* Fix for images in tables */
+html body .workspace .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .markdown-preview-section table td img,
+html body .workspace .markdown-rendered.is-readable-line-width .markdown-preview-sizer .markdown-preview-section table td img {
+    max-width: none !important;
+    width: auto !important;
+    height: auto !important;
 }
