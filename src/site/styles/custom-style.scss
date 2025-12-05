@@ -2,23 +2,33 @@
 body.theme-dark,
 body.theme-light,
 body {
-    --dg-content-margin-top: 0px;
-    --dg-content-margin-top-mobile: 25px;
-    --dg-content-font-size: 16px;
-    --dg-content-line-height: 1.5;
-    --dg-sidebar-top: 50px;
-    --dg-sidebar-gap: 150px;
-    --dg-filetree-width: 400px;
-    --dg-filetree-padding: 20px 20px;
-    --dg-filetree-gap: 150px;
-    --dg-sidebar-container-height: 87%;
-    --dg-graph-width: 350px;
-    --dg-graph-height: 160px;
-    --dg-graph-border-radius: 4px;
-    --dg-graph-margin-bottom: 0px;
-    --dg-navbar-title-size-mobile: 24px;
-    --dg-notelink-padding: 1px 3px 1px 4px;
-    --dg-notelink-size: 1rem;
-    --dg-notelink-border-width: 3px;
-    --dg-folder-margin: 4px 0 4px 2px;
+    --text-normal: #c07f30;
+    --text-muted: #b19c91;
+    --text-faint: #D0872E;
+    --text-accent: #b15b25;
+    --text-accent-hover: ;
+    --dg-content-max-width: 800px;
+    --dg-content-margin-top: 70px;
+    --dg-content-margin-top-mobile: 65px;
+    --dg-content-font-size: 17px;
+    --dg-content-line-height: 1.4;
+    --dg-sidebar-top: 75px;
+    --dg-filetree-gap: 90px;
+    --dg-filetree-title-size: 28px;
+    --dg-toc-padding: 0px;
+    --dg-toc-font-size: 0.8rem;
+    --dg-toc-title-size: 1.0rem;
+    --dg-backlinks-margin-top: 0px;
+    --dg-backlinks-title-size: 0.8rem;
+    --dg-backlinks-card-size: 0.80rem;
+    --dg-search-box-width: 800px;
+    --dg-search-box-radius: 1px;
+    --dg-search-box-padding: 10px;
+    --dg-search-input-size: 1.2rem;
+    --dg-search-input-padding: 6px;
+    --dg-search-input-radius: 2px;
+    --dg-search-result-size: 0.7rem;
+    --dg-search-link-size: 1.0rem;
+    --dg-search-btn-padding: 0 10px;
+    --dg-navbar-title-size-mobile: 21px;
 }
